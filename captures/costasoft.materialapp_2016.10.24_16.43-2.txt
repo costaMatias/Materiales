@@ -1,0 +1,152 @@
+AGGREGATED OVER LAST 24 HOURS:
+System memory usage:
+  SOn /Norm: 3 samples:
+    Cached: 174MB min, 191MB avg, 211MB max
+    Free: 18MB min, 44MB avg, 76MB max
+    ZRam: 85MB min, 95MB avg, 101MB max
+    Kernel: 33MB min, 34MB avg, 35MB max
+    Native: 14MB min, 15MB avg, 15MB max
+
+Per-Package Stats:
+  * costasoft.materialapp / u0a92 / v1:
+      * costasoft.materialapp / u0a92 / v1:
+               TOTAL: 31% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+                 Top: 31% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+          (Last Act): 0.09%
+            (Cached): 5.1% (17MB-17MB-17MB/15MB-15MB-15MB over 1)
+
+Summary:
+  * costasoft.materialapp / u0a92 / v1:
+           TOTAL: 31% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+             Top: 31% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+      (Last Act): 0.09%
+        (Cached): 5.1% (17MB-17MB-17MB/15MB-15MB-15MB over 1)
+
+Run time Stats:
+  SOff/Norm: +1h19m0s314ms
+  SOn /Norm: +18m28s340ms
+      TOTAL: +1h37m28s654ms
+
+Memory usage:
+  Kernel : 34MB (24 samples)
+  Native : 15MB (24 samples)
+  Persist: 101MB (50 samples)
+  Top    : 16MB (273 samples)
+  ImpFg  : 69MB (409 samples)
+  ImpBg  : 9.7MB (394 samples)
+  Service: 66MB (594 samples)
+  Receivr: 296KB (538 samples)
+  Home   : 451 (13 samples)
+  LastAct: 5.3MB (31 samples)
+  CchAct : 59MB (47 samples)
+  CchEmty: 179MB (356 samples)
+  Cached : 191MB (24 samples)
+  Free   : 44MB (24 samples)
+  Z-Ram   : 95MB (24 samples)
+  TOTAL  : 885MB
+  ServRst: 4.2KB (12 samples)
+
+          Start time: 2016-10-23 11:39:38
+  Total elapsed time: +1d5h3m36s125ms (partial) libart.so
+
+AGGREGATED OVER LAST 3 HOURS:
+System memory usage:
+  SOn /Norm: 3 samples:
+    Cached: 174MB min, 191MB avg, 211MB max
+    Free: 18MB min, 44MB avg, 76MB max
+    ZRam: 85MB min, 95MB avg, 101MB max
+    Kernel: 33MB min, 34MB avg, 35MB max
+    Native: 14MB min, 15MB avg, 15MB max
+
+Per-Package Stats:
+  * costasoft.materialapp / u0a92 / v1:
+      * costasoft.materialapp / u0a92 / v1:
+               TOTAL: 31% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+                 Top: 31% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+          (Last Act): 0.09%
+            (Cached): 5.1% (17MB-17MB-17MB/15MB-15MB-15MB over 1)
+
+Summary:
+  * costasoft.materialapp / u0a92 / v1:
+           TOTAL: 31% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+             Top: 31% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+      (Last Act): 0.09%
+        (Cached): 5.1% (17MB-17MB-17MB/15MB-15MB-15MB over 1)
+
+Run time Stats:
+  SOff/Norm: +1h19m0s314ms
+  SOn /Norm: +18m28s411ms
+      TOTAL: +1h37m28s725ms
+
+Memory usage:
+  Kernel : 34MB (24 samples)
+  Native : 15MB (24 samples)
+  Persist: 101MB (50 samples)
+  Top    : 16MB (273 samples)
+  ImpFg  : 69MB (409 samples)
+  ImpBg  : 9.7MB (394 samples)
+  Service: 66MB (594 samples)
+  Receivr: 296KB (538 samples)
+  Home   : 451 (13 samples)
+  LastAct: 5.3MB (31 samples)
+  CchAct : 59MB (47 samples)
+  CchEmty: 179MB (356 samples)
+  Cached : 191MB (24 samples)
+  Free   : 44MB (24 samples)
+  Z-Ram   : 95MB (24 samples)
+  TOTAL  : 885MB
+  ServRst: 4.2KB (12 samples)
+
+          Start time: 2016-10-23 11:39:38
+  Total elapsed time: +1d5h3m36s196ms (partial) libart.so
+
+CURRENT STATS:
+System memory usage:
+  SOn /Norm: 3 samples:
+    Cached: 174MB min, 191MB avg, 211MB max
+    Free: 18MB min, 44MB avg, 76MB max
+    ZRam: 85MB min, 95MB avg, 101MB max
+    Kernel: 33MB min, 34MB avg, 35MB max
+    Native: 14MB min, 15MB avg, 15MB max
+
+Per-Package Stats:
+  * costasoft.materialapp / u0a92 / v1:
+      * costasoft.materialapp / u0a92 / v1:
+               TOTAL: 81% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+                 Top: 81% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+          (Last Act): 0.23%
+            (Cached): 13% (17MB-17MB-17MB/15MB-15MB-15MB over 1)
+
+Summary:
+  * costasoft.materialapp / u0a92 / v1:
+           TOTAL: 81% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+             Top: 81% (8.4MB-19MB-22MB/15MB-18MB-20MB over 22)
+      (Last Act): 0.23%
+        (Cached): 13% (17MB-17MB-17MB/15MB-15MB-15MB over 1)
+
+Run time Stats:
+  SOff/Norm: +18m57s973ms
+  SOn /Norm: +18m28s338ms (running)
+      TOTAL: +37m26s311ms
+
+Memory usage:
+  Kernel : 34MB (24 samples)
+  Native : 15MB (24 samples)
+  Persist: 102MB (60 samples)
+  Top    : 21MB (75 samples)
+  ImpFg  : 94MB (98 samples)
+  ImpBg  : 6.7MB (117 samples)
+  Service: 46MB (233 samples)
+  Receivr: 321KB (172 samples)
+  Home   : 1.1KB (13 samples)
+  LastAct: 1.3MB (39 samples)
+  CchAct : 60MB (58 samples)
+  CchEmty: 169MB (174 samples)
+  Cached : 191MB (24 samples)
+  Free   : 44MB (24 samples)
+  Z-Ram   : 95MB (24 samples)
+  TOTAL  : 877MB
+  ServRst: 4.9KB (8 samples)
+
+          Start time: 2016-10-24 16:01:03
+  Total elapsed time: +42m11s314ms (partial) libart.so

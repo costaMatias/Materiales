@@ -1,0 +1,66 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaterialesFragment"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="460px"
+        android:id="@+id/frameLayout">
+
+        <ImageView
+            android:layout_width="1030dp"
+            android:layout_height="1154dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/material_imgprincipal"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|bottom">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo Producto"
+            android:id="@+id/btn_nuevoprod"
+            android:layout_marginBottom="2dp"
+            android:background="@color/btnBlue"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_mostrarProductos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mostrar Materiales"
+            android:layout_marginBottom="2dp"
+            android:background="@color/btnBlue"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal|bottom" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Materiales Favoritos"
+            android:background="@color/btnBlue"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MaterialesFragment"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="460px"
+        android:id="@+id/frameLayout">
+
+        <ImageView
+            android:layout_width="861dp"
+            android:layout_height="882dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/cliente_imgprincipal"
+            android:contentDescription="Imagen de clientes"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nuevo Cliente"
+            android:layout_marginBottom="2dp"
+            android:background="@color/btnRed"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mostrar Clientes"
+            android:layout_marginBottom="2dp"
+            android:background="@color/btnRed"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal|bottom"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clientes Favoritos"
+            android:background="@color/btnRed"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00695c</color>
+    <color name="colorPrimaryDark">#004d40</color>
+    <color name="colorAccent">#4caf50</color>
+
+    <color name="colorBackground">#fff5f5f5</color>
+
+    <!-- Colores de botones -->
+
+    <color name="btnRed">#d32f2f</color>
+    <color name="btnGreen">#7cb342</color>
+    <color name="btnBlue">#3d5afe</color>
+    <color name="btnDefault">#bdbdbd</color>
+    <color name="btnOk">#009688</color>
+
+        <color name="bg_login">#26ae90</color>
+        <color name="bg_register">#2e3237</color>
+        <color name="bg_main">#428bca</color>
+        <color name="white">#ffffff</color>
+        <color name="input_login">#222222</color>
+        <color name="input_login_hint">#999999</color>
+        <color name="input_register">#888888</color>
+        <color name="input_register_bg">#3b4148</color>
+        <color name="input_register_hint">#5e6266</color>
+        <color name="btn_login">#26ae90</color>
+        <color name="btn_login_bg">#eceef1</color>
+        <color name="lbl_name">#333333</color>
+        <color name="btn_logut_bg">#ff6861</color>
+     
+</resources>

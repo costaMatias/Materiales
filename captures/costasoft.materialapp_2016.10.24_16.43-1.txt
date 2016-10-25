@@ -1,0 +1,38 @@
+Applications Memory Usage (kB):
+Uptime: 32980702 Realtime: 200347897
+
+** MEMINFO in pid 353 [costasoft.materialapp] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap        0        0        0        0     9377     9377    15198
+  Dalvik Heap     7360     7112        0      700     8388     7066     1322
+ Dalvik Other      579      560        0        0                           
+        Stack      188      188        0        0                           
+       Ashmem       16        4        0        0                           
+    Other dev        4        0        4        0                           
+     .so mmap     1065      144      476     1796                           
+    .apk mmap      186        0       52        0                           
+    .ttf mmap      167        0      152        0                           
+    .dex mmap     3536        0     3448        0                           
+    code mmap     1529        0      488        0                           
+   image mmap     1298      800       92      664                           
+   Other mmap       22        4        0        0                           
+      Unknown     6675     6640        0     1624                           
+        TOTAL    22625    15452     4712     4784    17765    16443    16520
+ 
+ Objects
+               Views:       67         ViewRootImpl:        2
+         AppContexts:        4           Activities:        2
+              Assets:        3        AssetManagers:        3
+       Local Binders:       11        Proxy Binders:       16
+    Death Recipients:        0
+     OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:       93
+  PAGECACHE_OVERFLOW:       20          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       20             17         0/15/1  /data/data/costasoft.materialapp/databases/administracion

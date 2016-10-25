@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">MaterialApp</string>
+    <string name="title_activity_insert">Nuevo producto</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+        
+    <string name="hint_codigo">Código</string>
+        
+    <string name="hint_descripcion">Descripción</string>
+        
+    <string name="hint_precio">Precio</string>
+    <string name="hint_marca">Marca</string>
+        
+    <string name="btn_agregar">AGREGAR</string>
+        
+    <string name="btn_register">REGISTER</string>
+        
+    <string name="btn_link_to_register">Not a member? Sign up now.</string>
+        
+    <string name="btn_link_to_login">Already registred! Login Me.</string>
+        
+    <string name="welcome">Welcome</string>
+        
+    <string name="btn_logout">LOGOUT</string>
+        
+</resources>
+
+

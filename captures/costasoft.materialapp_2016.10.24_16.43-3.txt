@@ -1,0 +1,94 @@
+Applications Graphics Acceleration Info:
+Uptime: 32990534 Realtime: 200357729
+
+** Graphics info for pid 353 [costasoft.materialapp] **
+
+Recent DisplayList operations
+                  DrawRenderNode
+                DrawRenderNode
+                DrawRenderNode
+                RestoreToCount
+              RestoreToCount
+  DrawRenderNode
+  DrawRenderNode
+RestoreToCount
+Save
+DrawRenderNode
+  DrawRenderNode
+    DrawRect
+  DrawRenderNode
+    DrawRenderNode
+      DrawRenderNode
+        DrawRenderNode
+          DrawRenderNode
+            DrawRect
+            DrawRenderNode
+            DrawRenderNode
+              DrawRenderNode
+                DrawRect
+              Save
+              ClipRect
+              DrawRenderNode
+                Save
+                ClipRect
+                DrawRenderNode
+                  DrawRenderNode
+                    Translate
+                    DrawRenderNode
+                      DrawRect
+                    Save
+                    Translate
+                    Save
+                    DrawBitmap
+                    RestoreToCount
+                    Save
+                    ClipRect
+                    Translate
+                    DrawText
+                    RestoreToCount
+                  DrawRenderNode
+                DrawRenderNode
+                DrawRenderNode
+                RestoreToCount
+              RestoreToCount
+  DrawRenderNode
+  DrawRenderNode
+RestoreToCount
+
+Caches:
+Current memory usage / total memory usage (bytes):
+  TextureCache           630168 / 25165824
+  LayerCache                  0 / 16777216 (numLayers = 0)
+  Garbage layers              0
+  Active layers               0
+  RenderBufferCache           0 /  2097152
+  GradientCache               0 /   524288
+  PathCache                   0 / 10485760
+  TessellationCache           0 /  1048576
+  TextDropShadowCache         0 /  2097152
+  PatchCache                 64 /   131072
+  FontRenderer 0 A8      524288 /   524288
+  FontRenderer 0 RGBA         0 /        0
+  FontRenderer 0 total   524288 /   524288
+Other:
+  FboCache                    0 /        0
+Total memory usage:
+  1154520 bytes, 1.10 MB
+
+Profile data in ms:
+
+	costasoft.materialapp/costasoft.materialapp.MainActivity/android.view.ViewRootImpl@39d18d55 (visibility=8)
+	costasoft.materialapp/costasoft.materialapp.InsertActivity/android.view.ViewRootImpl@1249c3f5 (visibility=0)
+View hierarchy:
+
+  costasoft.materialapp/costasoft.materialapp.MainActivity/android.view.ViewRootImpl@39d18d55
+  42 views, 33.47 kB of display lists
+
+  costasoft.materialapp/costasoft.materialapp.InsertActivity/android.view.ViewRootImpl@1249c3f5
+  22 views, 24.53 kB of display lists
+
+
+Total ViewRootImpl: 2
+Total Views:        64
+Total DisplayList:  58.00 kB
+

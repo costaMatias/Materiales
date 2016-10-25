@@ -1,0 +1,38 @@
+Activity Resolver Table:
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        188498df costasoft.materialapp/.MainActivity filter 34d2620b
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+
+Key Set Manager:
+  [costasoft.materialapp]
+      Signing KeySets: 134
+
+Packages:
+  Package [costasoft.materialapp] (21fefa8a):
+    userId=10092 gids=[3003]
+    pkg=Package{11fe1393 costasoft.materialapp}
+    codePath=/data/app/costasoft.materialapp-1
+    resourcePath=/data/app/costasoft.materialapp-1
+    legacyNativeLibraryDir=/data/app/costasoft.materialapp-1/lib
+    primaryCpuAbi=null
+    secondaryCpuAbi=null
+    versionCode=1 targetSdk=23
+    versionName=1.0
+    applicationInfo=ApplicationInfo{2152eff5 costasoft.materialapp}
+    flags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    pkgFlagsEx=[ ]
+    dataDir=/data/data/costasoft.materialapp
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
+    timeStamp=2016-10-24 16:18:01
+    firstInstallTime=2016-10-13 17:07:56
+    lastUpdateTime=2016-10-24 16:18:02
+    signatures=PackageSignatures{5aaa371 [1da3556]}
+    permissionsFixed=true haveGids=true installStatus=1
+    pkgFlags=[ DEBUGGABLE HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    User 0:  installed=true hidden=false stopped=false notLaunched=false enabled=0
+    User 10:  installed=true hidden=false stopped=true notLaunched=true enabled=0
+    User 11:  installed=true hidden=false stopped=true notLaunched=true enabled=0
+    grantedPermissions:
+      android.permission.INTERNET

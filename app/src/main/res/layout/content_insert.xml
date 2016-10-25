@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#A5B6CB"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp" > 
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_marca"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:hint="@string/hint_marca"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:singleLine="true"
+                android:textColor="@color/input_login"
+                android:textColorHint="@color/input_login_hint"
+                android:drawableStart="@drawable/ic_domain_black_24dp"
+                android:layout_marginRight="40dp"/>
+
+            <EditText
+                android:id="@+id/et_precio"
+                android:layout_width="250dp"
+                android:textAlignment="center"
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/white"
+                android:hint="@string/hint_precio"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@color/input_login"
+                android:textColorHint="@color/input_login_hint"
+                android:drawableStart="@drawable/ic_attach_money_black_24dp" />
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/et_descripcion"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:hint="@string/hint_descripcion"
+            android:padding="10dp"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:singleLine="false"
+            android:textColor="@color/input_login"
+            android:textColorHint="@color/input_login_hint"
+            android:drawableStart="@drawable/ic_description_black_24dp"/>
+            <!-- Botón añadir -->
+
+            <Button
+                android:id="@+id/btn_nuevoprod"
+                android:layout_width="match_parent"
+                android:padding="20dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#364659"
+                android:text="@string/btn_agregar"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:nestedScrollingEnabled="false" />
+    </LinearLayout>                  
+</LinearLayout>
