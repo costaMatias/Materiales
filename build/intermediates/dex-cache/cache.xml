@@ -1,12 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" >
+<items version="2" />
 
-    <item
-        jar="C:\Users\matia\Documents\Proyectos-Android\MaterialApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="24.0.2"
-        sha1="b53547fa29c982fce17220f5e3a2a00eb61f7152">
-        <dex dex="C:\Users\matia\Documents\Proyectos-Android\MaterialApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_5378059892b84f84e5842ec54d26da4f18d7a33e\classes.dex" />
-    </item>
-
-</items>

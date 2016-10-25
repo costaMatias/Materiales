@@ -50,12 +50,36 @@
             android:id="@+id/btn_buscarTodos"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
             android:background="#723534"
             android:text="Ver todos"
             android:textSize="20dp"
             android:textColor="@color/white"
             android:textAlignment="center"
             />
+        <Button
+            android:id="@+id/btn_buscarWeb"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/bg_register"
+            android:text="Ver desde web"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            />
+        <Button
+            android:id="@+id/btn_eliminarTodos"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:background="@color/bg_main"
+            android:text="Eliminar todos"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            />
+
+
     </TableLayout>
 
 </LinearLayout>

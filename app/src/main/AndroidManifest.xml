@@ -23,7 +23,11 @@
             android:label="@string/title_activity_insert"
             android:theme="@style/AppTheme" />
         <activity android:name=".materialesList" />
-        <activity android:name=".MaterialBuscar"></activity>
+        <activity android:name=".MaterialBuscar" />
+        <activity
+            android:name=".Materiales_verWeb"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Materiales_eliminarTodos"></activity>
     </application>
 
 </manifest>

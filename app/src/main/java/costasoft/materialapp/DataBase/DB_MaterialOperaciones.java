@@ -1,5 +1,6 @@
 package costasoft.materialapp.DataBase;
 
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 import costasoft.materialapp.Material;
+import cz.msebera.android.httpclient.entity.ContentLengthStrategy;
 
 /**
  * Created by Benjamin Costa on 20/10/2016.
@@ -18,12 +20,16 @@ public class DB_MaterialOperaciones {
     private DBHelper database;
     private SQLiteDatabase db;
     private Context thisContext;
+    //Diseño
+    ProgressDialog progress;
 
 
     public DB_MaterialOperaciones(Context context){
         this.thisContext = context;
         this.database = new DBHelper(context,"administracion", null, 1);
         this.db = database.getWritableDatabase();
+        progress = new ProgressDialog(context);
+
     }
 
     public void MaterialAñadir(Material prod){
@@ -34,6 +40,46 @@ public class DB_MaterialOperaciones {
         db.insert("articulos",null,productoDatos);
         db.close();
         mostrarToastLargo("El articulo se cargó correctamente");
+    }
+
+    public void MaterialAñadirArray(ArrayList<Material> prods){
+        int size = prods.size();
+        ContentValues productoDatos = new ContentValues();
+        progress.setMessage("Añadiendo productos desde la web");
+        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        progress.setMax(size);
+        int mult = 10;
+        for(int i=0;i<size;i++){
+
+            productoDatos.put("descripcion",prods.get(i).getDescripcion());
+            productoDatos.put("marca",prods.get(i).getMarca());
+            productoDatos.put("precio",prods.get(i).getPrecio());
+            db.insert("articulos",null,productoDatos);
+            if(i == mult){
+                progress.incrementProgressBy(i);
+                mult+=10;
+            }
+            progress.show();
+        }
+    mostrarToastLargo(size+" Artículos cargados correctamente!");
+    db.close();
+    }
+
+    public void MaterialEliminarTodos(){
+        progress.setMessage("Eliminando productos almacenados en base de datos local");
+        progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
+        progress.setIndeterminate(true);
+        progress.setProgress(0);
+        progress.show();
+        db.execSQL("DELETE FROM articulos");
+        Cursor cursor=db.rawQuery("SELECT * FROM articulos",null);
+        if(cursor!=null){
+            mostrarToastLargo("Eliminación errónea");
+        }
+        else{
+            mostrarToastLargo("Eliminación exitosa!");
+        }
+        cursor.close();
     }
 
     public void MaterialMostrarTodos(){

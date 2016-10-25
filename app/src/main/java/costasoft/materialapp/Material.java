@@ -1,5 +1,8 @@
 package costasoft.materialapp;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Created by Benjamin Costa on 20/10/2016.
  */
@@ -23,6 +26,14 @@ public class Material {
         this.marca = mark;
         this.descripcion = descrip;
         this.precio = precioFinal;
+    }
+
+    public Material(JSONObject jsonObject) throws JSONException {
+        this.codigo = jsonObject.getInt("codigo");
+        this.marca = jsonObject.getString("Marca");
+        this.descripcion = jsonObject.getString("Descripción");
+        this.precio = 0;
+
     }
 
     //Métodos Set

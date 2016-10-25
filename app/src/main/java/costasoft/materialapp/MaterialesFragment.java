@@ -16,7 +16,7 @@ import costasoft.materialapp.R;
  * A simple {@link Fragment} subclass.
  */
 public class MaterialesFragment extends Fragment {
-    Button btn_nuevoMaterial,btn_mostrarTodos,btn_favs;
+    private Button btn_nuevoMaterial,btn_mostrarTodos,btn_favs;
 
     public MaterialesFragment() {
         // Required empty public constructor
@@ -41,7 +41,7 @@ public class MaterialesFragment extends Fragment {
 
         btn_mostrarTodos.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
              Intent i = new Intent(getContext(), MaterialBuscar.class);
                 startActivity(i);
             }

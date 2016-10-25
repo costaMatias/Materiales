@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class MaterialBuscar extends AppCompatActivity {
     EditText DatoBuscar;
-    Button btn_allProducts, btn_searchProduct;
+    Button btn_allProducts, btn_searchProduct,btn_cleanAll, btn_searchWeb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,8 +19,16 @@ public class MaterialBuscar extends AppCompatActivity {
         btn_allProducts = (Button)findViewById(R.id.btn_buscarTodos);
         DatoBuscar = (EditText)findViewById(R.id.et_Buscardescripcion);
         btn_searchProduct = (Button) findViewById(R.id.btn_buscar);
+        btn_searchWeb = (Button)findViewById(R.id.btn_buscarWeb);
+        btn_cleanAll = (Button)findViewById(R.id.btn_eliminarTodos);
 
-
+        btn_searchWeb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),Materiales_verWeb.class);
+                startActivity(i);
+            }
+        });
 
         btn_searchProduct.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,6 +46,14 @@ public class MaterialBuscar extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                Intent i = new Intent(getBaseContext(),materialesList.class);
+                startActivity(i);
+            }
+        });
+
+        btn_cleanAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getBaseContext(),Materiales_eliminarTodos.class);
                 startActivity(i);
             }
         });
