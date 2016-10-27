@@ -20,7 +20,7 @@ aapp/build/generated/source/r/debug/android/support/v7/recyclerview
 aapp/build/generated/source/r/debug/costasoft/materialapp
 aapp/build/intermediates/blame/res/debug/multi
 aapp/build/intermediates/blame/res/debug/single
-aapp/build/intermediates/builds/debug/62192608148555
+rapp/build/intermediates/builds/debug/62192608148555
 aapp/build/intermediates/bundles/debug/instant-run
 aapp/build/intermediates/classes/debug/android/support/design
 aapp/build/intermediates/classes/debug/android/support/v7/appcompat
@@ -209,7 +209,7 @@ aapp/build/intermediates/incremental/mergeDebugShaders
 aapp/build/intermediates/instant-run-support/debug
 aapp/build/intermediates/manifest/androidTest/debug
 aapp/build/intermediates/manifests/full/debug
-aapp/build/intermediates/pre-dexed/debug
+rapp/build/intermediates/pre-dexed/debug
 aapp/build/intermediates/res
 aapp/build/intermediates/res/merged/debug/anim
 aapp/build/intermediates/res/merged/debug/anim-v21
@@ -231,7 +231,7 @@ aapp/build/intermediates/res/merged/debug/drawable-xxhdpi-v4
 aapp/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4
 aapp/build/intermediates/res/merged/debug/layout
 aapp/build/intermediates/res/merged/debug/layout-sw600dp-v13
-aapp/build/intermediates/res/merged/debug/menu
+rapp/build/intermediates/res/merged/debug/menu
 aapp/build/intermediates/res/merged/debug/mipmap-hdpi-v4
 aapp/build/intermediates/res/merged/debug/mipmap-mdpi-v4
 aapp/build/intermediates/res/merged/debug/mipmap-xhdpi-v4
@@ -375,11 +375,11 @@ aapp/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/su
 aapp/build/intermediates/transforms/instantRun/debug/folders/1/5/main/android/support/v7/recyclerview
 aapp/build/intermediates/transforms/instantRun/debug/folders/1/5/main/costasoft/materialapp
 aapp/build/intermediates/transforms/instantRun/debug/folders/1/5/main/costasoft/materialapp/DataBase
-aapp/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/android/support/design
-aapp/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/android/support/v7/appcompat
+rapp/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/android/support/design
+rapp/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/android/support/v7/appcompat
 aapp/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime
-aapp/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/costasoft/materialapp
-aapp/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/costasoft/materialapp/DataBase
+rapp/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/costasoft/materialapp
+rapp/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/costasoft/materialapp/DataBase
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/android/support/design
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/android/support/v7/cardview
@@ -412,7 +412,6 @@ aapp/src/main/res/drawable-xhdpi
 aapp/src/main/res/drawable-xxhdpi
 aapp/src/main/res/drawable-xxxhdpi
 aapp/src/main/res/layout
-aapp/src/main/res/menu
 aapp/src/main/res/mipmap-hdpi
 aapp/src/main/res/mipmap-mdpi
 aapp/src/main/res/mipmap-xhdpi

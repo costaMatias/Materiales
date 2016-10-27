@@ -14,7 +14,6 @@ public class Material {
 
 
     //Constructores
-
     public Material(){
         this.codigo = 0;
         this.marca = null;
@@ -31,9 +30,26 @@ public class Material {
     public Material(JSONObject jsonObject) throws JSONException {
         this.codigo = jsonObject.getInt("codigo");
         this.marca = jsonObject.getString("Marca");
-        this.descripcion = jsonObject.getString("Descripción");
-        this.precio = 0;
+        String pre =  (jsonObject.getString("Precio final"));
+        boolean coma = false;
+        for(int i = 0;i<pre.length();i++){
+         if(pre.charAt(i)==','){
+             pre = pre.replace(pre.charAt(i),'.');
+             coma = true;
+         }
+        }
+        if(coma==false){
+            if((Float.valueOf(pre)>0))
+            {
+                pre.concat(",0");
+            }
+            else {
+                pre = "0.0";
+            }
 
+        }
+        this.precio = Float.valueOf(pre);
+        this.descripcion = jsonObject.getString("Descripción");
     }
 
     //Métodos Set

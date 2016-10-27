@@ -5,6 +5,7 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Handler;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class DB_MaterialOperaciones {
     private Context thisContext;
     //Diseño
     ProgressDialog progress;
+    int progressStatus = 0;
 
 
     public DB_MaterialOperaciones(Context context){
@@ -48,19 +50,16 @@ public class DB_MaterialOperaciones {
         progress.setMessage("Añadiendo productos desde la web");
         progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progress.setMax(size);
+        progress.show();
         int mult = 10;
-        for(int i=0;i<size;i++){
+        for(progressStatus=0;progressStatus<size;progressStatus++){
 
-            productoDatos.put("descripcion",prods.get(i).getDescripcion());
-            productoDatos.put("marca",prods.get(i).getMarca());
-            productoDatos.put("precio",prods.get(i).getPrecio());
+            productoDatos.put("descripcion",prods.get(progressStatus).getDescripcion());
+            productoDatos.put("marca",prods.get(progressStatus).getMarca());
+            productoDatos.put("precio",prods.get(progressStatus).getPrecio());
             db.insert("articulos",null,productoDatos);
-            if(i == mult){
-                progress.incrementProgressBy(i);
-                mult+=10;
+                progress.setProgress(progressStatus);
             }
-            progress.show();
-        }
     mostrarToastLargo(size+" Artículos cargados correctamente!");
     db.close();
     }
@@ -69,7 +68,6 @@ public class DB_MaterialOperaciones {
         progress.setMessage("Eliminando productos almacenados en base de datos local");
         progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progress.setIndeterminate(true);
-        progress.setProgress(0);
         progress.show();
         db.execSQL("DELETE FROM articulos");
         Cursor cursor=db.rawQuery("SELECT * FROM articulos",null);
@@ -100,6 +98,23 @@ public class DB_MaterialOperaciones {
         }
         return resultados;
     }
+
+    public ArrayList<Material> buscarMaterialFullFiltro(String refMarca, String refDescrip){
+        ArrayList<Material>resultados = new ArrayList<Material>();
+        Cursor cursor = db.rawQuery("SELECT * FROM articulos WHERE descripcion LIKE '%"+refDescrip+"%' AND marca LIKE '%"+refMarca+"%'",null);
+        if(cursor.moveToFirst()){
+            do{
+                Material prod = new Material(cursor.getString(1),cursor.getString(2),cursor.getFloat(3));
+                resultados.add(prod);
+            }while(cursor.moveToNext());
+        }
+        if(cursor !=null && !cursor.isClosed()){
+            cursor.close();
+        }
+        return resultados;
+    }
+
+
 
     public Material VerMaterial(){
         Material mat = null;

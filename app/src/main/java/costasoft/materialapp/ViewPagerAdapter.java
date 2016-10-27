@@ -1,5 +1,6 @@
 package costasoft.materialapp;
 
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -13,9 +14,9 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     ArrayList<Fragment> fragments = new ArrayList<>();
     ArrayList<String> tabTitles = new ArrayList<>();
 
-    public void addFragments(Fragment fragments, String tabTitlesles){
+    public void addFragments(Fragment fragments, String title){
       this.fragments.add(fragments);
-        this.tabTitles.add(tabTitlesles);
+        this.tabTitles.add(title);
     }
 
 

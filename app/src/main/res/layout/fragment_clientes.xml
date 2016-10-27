@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <FrameLayout
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="460px"
         android:id="@+id/frameLayout">
@@ -21,40 +21,50 @@
             android:layout_gravity="center" />
     </FrameLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:orientation="vertical"
+        android:layout_margin="20dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center_horizontal|bottom">
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Nuevo Cliente"
-            android:layout_marginBottom="2dp"
-            android:background="@color/btnRed"
-            android:textColor="#ffffff"
-            android:textStyle="bold"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_search_white_48dp"
+            android:paddingTop="10dp"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
             android:text="Mostrar Clientes"
             android:layout_marginBottom="2dp"
             android:background="@color/btnRed"
             android:textColor="#ffffff"
             android:textStyle="bold"
-            android:layout_gravity="center_horizontal|bottom"/>
+            android:layout_gravity="right|top"/>
 
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_add_circle_white_48dp"
+            android:paddingTop="10dp"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:text="Nuevo Cliente"
+            android:layout_marginBottom="2dp"
+            android:background="@color/btnRed"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_gravity="left|top" />
+
+        <Button
+            android:drawableTop="@drawable/ic_favorite_white_24dp"
+            android:paddingTop="20dp"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
             android:text="Clientes Favoritos"
             android:background="@color/btnRed"
             android:textColor="#ffffff"
-            android:textStyle="bold"/>
+            android:textStyle="bold"
+            android:layout_gravity="left|center_vertical" />
 
-    </LinearLayout>
+
+    </FrameLayout>
 
 
 </LinearLayout>
