@@ -1,12 +1,15 @@
 package costasoft.materialapp;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
  * Created by Benjamin Costa on 20/10/2016.
  */
-public class Material {
+public class Material implements Parcelable{
     private int codigo;
     private String marca;
     private String descripcion;
@@ -18,6 +21,29 @@ public class Material {
         this.codigo = 0;
         this.marca = null;
         this.descripcion = null;
+        this.precio = 0;
+    }
+    
+    public Material(Parcel in){
+        super();
+        readFromParcel(in);
+        
+    }
+
+    public static final Parcelable.Creator<Material> CREATOR = new Parcelable.Creator<Material>() {
+        public Material createFromParcel(Parcel in) {
+            return new Material(in);
+        }
+        public Material[] newArray(int size){
+        return new Material[size];
+        }
+    };
+
+    private void readFromParcel(Parcel in) {
+        codigo = in.readInt();
+        marca = in.readString();
+        descripcion = in.readString();
+        precio = in.readFloat();
     }
 
     public Material(String mark, String descrip,float precioFinal){
@@ -85,5 +111,18 @@ public class Material {
 
     public float getPrecio() {
         return precio;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(codigo);
+        dest.writeString(marca);
+        dest.writeString(descripcion);
+        dest.writeFloat(precio);
     }
 }

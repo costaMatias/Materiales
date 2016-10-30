@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<android.support.v7.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="10dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_marca"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="marca"
+                android:padding="10dp"
+                android:textColor="@color/lbl_name"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:drawableStart="@drawable/ic_domain_black_24dp"/>
+            <TextView
+                android:id="@+id/tv_precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="precio"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_attach_money_black_24dp"
+                android:textSize="18dp"
+                android:textColor="@color/lbl_name"
+                android:textAlignment="center"
+                android:layout_marginStart="250dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_descripcion"
+            android:layout_width="545dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:text="descripcion"
+            android:drawableStart="@drawable/ic_description_black_24dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/lbl_name"
+            android:textSize="15dp"
+            android:drawablePadding="15dp"
+            android:layout_weight="0.65" />
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="530dp"
+        android:src="@drawable/ic_send_white_24dp"
+        android:background="@color/colorAccent"
+        android:id="@+id/shareMaterial"
+        />
+</LinearLayout>

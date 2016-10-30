@@ -20,7 +20,7 @@ import java.util.List;
 
 import costasoft.materialapp.DataBase.DB_MaterialOperaciones;
 
-public class materialesList extends AppCompatActivity {
+public class materialesList extends AppCompatActivity{
     private DB_MaterialOperaciones db;
     private RecyclerView recycler;
     private MaterialesAdapter adapter;
@@ -29,6 +29,9 @@ public class materialesList extends AppCompatActivity {
     private EditText filtroDescrip,filtroMarca;
     private CheckBox checkMarca,checkDescrip;
     private FloatingActionButton btn_filtro;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,7 +140,7 @@ public class materialesList extends AppCompatActivity {
         lManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(lManager);
 
-        adapter = new MaterialesAdapter(items);
+        adapter = new MaterialesAdapter(items,this);
         recycler.setAdapter(adapter);
         recycler.setItemAnimator(new DefaultItemAnimator());
     }

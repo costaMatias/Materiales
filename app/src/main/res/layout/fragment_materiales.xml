@@ -68,6 +68,19 @@
             android:textStyle="bold"
             android:layout_gravity="left|center_vertical" />
 
+        <Button
+            android:drawableTop="@drawable/ic_shopping_cart_black_24dp"
+            android:id="@+id/btn_armarPresupuesto"
+            android:paddingTop="10dp"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:text="Armar Presupuesto"
+            android:layout_marginBottom="2dp"
+            android:background="#40C4FF"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:layout_gravity="right|center_vertical" />
+
 
     </FrameLayout>
 

@@ -18,7 +18,7 @@ aapp/build/generated/source/r/debug/android/support/v7/appcompat
 aapp/build/generated/source/r/debug/android/support/v7/cardview
 aapp/build/generated/source/r/debug/android/support/v7/recyclerview
 aapp/build/generated/source/r/debug/costasoft/materialapp
-aapp/build/intermediates/blame/res/debug/multi
+rapp/build/intermediates/blame/res/debug/multi
 aapp/build/intermediates/blame/res/debug/single
 rapp/build/intermediates/builds/debug/62192608148555
 aapp/build/intermediates/bundles/debug/instant-run
@@ -386,12 +386,12 @@ aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/a
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/com/android/tools/fd/dummy
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_0/costasoft/materialapp
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_1/com/android/tools/fd/dummy
-aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2
+rapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/android/support/v7/appcompat
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_2/com/android/tools/fd/dummy
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_3/com/android/tools/fd/dummy
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_4/com/android/tools/fd/dummy
-aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5
+rapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/com/android/tools/fd/dummy
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_5/costasoft/materialapp/DataBase
 aapp/build/intermediates/transforms/instantRunSlicer/debug/folders/1/5/slice_6/com/android/tools/fd/dummy
