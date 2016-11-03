@@ -1,5 +1,7 @@
 package costasoft.materialapp;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Parcelable;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -13,10 +15,14 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -28,8 +34,10 @@ public class Material_presupuesto_armarLista extends AppCompatActivity {
     private MaterialesAdapter adapter;
     private RecyclerView.LayoutManager lManager;
     private ArrayList<Material> listaItem;
-    private ArrayList<Material> listaPresupuesto = new ArrayList<Material>();
+    private ArrayList<MaterialPresupuesto> listaPresupuesto = new ArrayList<MaterialPresupuesto>();
     private EditText filtroDescrip,filtroMarca;
+    public MaterialPresupuesto prodAux;
+    public int cant;
     private CheckBox checkMarca,checkDescrip;
     private FloatingActionButton btn_filtro,btn_send;
 
@@ -49,7 +57,7 @@ public class Material_presupuesto_armarLista extends AppCompatActivity {
 
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout)findViewById(R.id.collapsing_container);
         collapsingToolbarLayout.setTitle("Filtraje");
-
+        prodAux = new MaterialPresupuesto(cant);
 
 
         db = new DB_MaterialOperaciones(this);
@@ -60,7 +68,6 @@ public class Material_presupuesto_armarLista extends AppCompatActivity {
         checkMarca = (CheckBox)findViewById(R.id.chMarca);
         btn_filtro = (FloatingActionButton)findViewById(R.id.filtro);
         btn_send = (FloatingActionButton)findViewById(R.id.btn_share);
-
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
             filtroDescrip.setText(bundle.getString("datoRefer"));
@@ -147,7 +154,35 @@ public class Material_presupuesto_armarLista extends AppCompatActivity {
         listaItem = db.buscarMaterial(descripcion);
     }
 
-    private void inicializarRecicler(ArrayList<Material> items) {
+    public AlertDialog createDialogCantidad() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Material_presupuesto_armarLista.this);
+
+        LayoutInflater inflater = Material_presupuesto_armarLista.this.getLayoutInflater();
+
+        View v = inflater.inflate(R.layout.alertdialog_cantidadmaterial, null);
+
+        builder.setView(v);
+
+        final EditText etCant = (EditText)v.findViewById(R.id.et_cantidadProds);
+        TextView tvDes = (TextView)v.findViewById(R.id.tv_descrip_alertDialog);
+        builder.setCancelable(true);
+        tvDes.setText("Indique cantidad a solicitar");
+        builder.setPositiveButton("Añadir", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                cant= Integer.parseInt(etCant.getText().toString());
+                Log.d("cantEt",etCant.getText().toString());
+                prodAux = new MaterialPresupuesto(cant);
+                Log.i("AuxCantDentro",String.valueOf(prodAux.getCantidad()));
+                //Log.d("cantAuxAux",String.valueOf(prodAux.getCantidad()));
+            }
+        });
+
+        return builder.create();
+    }
+
+
+    private void inicializarRecicler(ArrayList<Material> items){
         recycler = (RecyclerView)findViewById(R.id.reciclador);
         recycler.setHasFixedSize(true);
 
@@ -157,14 +192,21 @@ public class Material_presupuesto_armarLista extends AppCompatActivity {
         adapter = new MaterialesAdapter(items,this);
         adapter.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(final View v) {
                 Log.i("PruebaTouchProducts","Pulsó descripcion: "+adapter.obtenerItem(recycler.getChildAdapterPosition(v)).getDescripcion());
-                Material prod = new Material();
+
+                createDialogCantidad().show();
+
+                Log.i("AuxCantFuera",String.valueOf(prodAux.getCantidad()));
+                MaterialPresupuesto prod = new MaterialPresupuesto(prodAux.getCantidad());
                 prod.setDescripcion(adapter.obtenerItem((recycler.getChildAdapterPosition(v))).getDescripcion());
                 prod.setMarca(adapter.obtenerItem(recycler.getChildAdapterPosition(v)).getMarca());
                 prod.setPrecio(adapter.obtenerItem(recycler.getChildAdapterPosition(v)).getPrecio());
+                prod.setCantidad(prodAux.getCantidad());
+                Log.i("prodCant",String.valueOf(prod.getCantidad()));
                 listaPresupuesto.add(prod);
                 Log.i("ListaPres","Size: "+listaPresupuesto.size());
+                Log.i("cant",String.valueOf(prod.getCantidad()));
             }
         });
         recycler.setAdapter(adapter);
@@ -175,11 +217,14 @@ public class Material_presupuesto_armarLista extends AppCompatActivity {
 
 
 
+
+
     //Boton atras acción
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
         switch(item.getItemId()){
             case android.R.id.home:
+                listaPresupuesto.clear();
                 finish();
                 return true;
             default:

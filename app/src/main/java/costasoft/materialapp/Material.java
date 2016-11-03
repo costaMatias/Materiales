@@ -55,25 +55,40 @@ public class Material implements Parcelable{
 
     public Material(JSONObject jsonObject) throws JSONException {
         this.codigo = jsonObject.getInt("codigo");
-        this.marca = jsonObject.getString("Marca");
+        String mark = jsonObject.getString("Marca");
+        if(mark==null){
+            this.marca = "NULL";
+        }
+        else{
+            this.marca = mark;
+        }
         String pre =  (jsonObject.getString("Precio final"));
         boolean coma = false;
-        for(int i = 0;i<pre.length();i++){
-         if(pre.charAt(i)==','){
-             pre = pre.replace(pre.charAt(i),'.');
-             coma = true;
-         }
+        int longitud = pre.length();
+        for(int i = 0;i<longitud;i++) {
+            if (pre.charAt(i) == ',') {
+                pre = pre.replace(pre.charAt(i), '.');
+                coma = true;
+            } else {
+                if (pre.charAt(i) == '.') {
+                    String a = pre.substring(0, i);
+                    String b = pre.substring(i + 1, longitud);
+                    pre = "";
+                    pre = pre.concat(a);
+                    pre = pre.concat(b);
+                    coma = true;
+                    longitud = pre.length();
+                }
+            }
         }
-        if(coma==false){
-            if((Float.valueOf(pre)>0))
-            {
-                pre.concat(",0");
-            }
-            else {
-                pre = "0.0";
-            }
+            if (coma == false) {
+                if ((Float.valueOf(pre) > 0)) {
+                    pre.concat(".0");
+                } else {
+                    pre = "0.0";
+                }
 
-        }
+            }
         this.precio = Float.valueOf(pre);
         this.descripcion = jsonObject.getString("Descripción");
     }

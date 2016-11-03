@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="5dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_marca"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="marca"
+                android:padding="10dp"
+                android:textColor="@color/lbl_name"
+                android:textSize="18dp"
+                android:textAlignment="center"
+                android:drawableStart="@drawable/ic_domain_black_24dp"/>
+            <TextView
+                android:id="@+id/tv_precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="precio"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_attach_money_black_24dp"
+                android:textSize="18dp"
+                android:textColor="@color/lbl_name"
+
+                android:textAlignment="center"
+                android:layout_marginLeft="100dp"
+                />
+            <TextView
+                android:id="@+id/tv_cantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="cantidad"
+                android:padding="10dp"
+                android:drawableStart="@drawable/ic_shopping_cart_black_24dp"
+                android:textSize="18dp"
+                android:textColor="@color/lbl_name"
+                android:textAlignment="center"
+                android:layout_marginLeft="100dp"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:padding="30dp"
+            android:text="descripcion"
+            android:drawableStart="@drawable/ic_description_black_24dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/lbl_name"
+            android:textSize="15dp"
+            android:drawablePadding="15dp"
+            android:layout_weight="0.65" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

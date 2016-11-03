@@ -29,9 +29,9 @@ import costasoft.materialapp.DataBase.DB_MaterialOperaciones;
 public class Material_presupuesto_listaConfirmar extends AppCompatActivity {
     private DB_MaterialOperaciones db;
     private RecyclerView recycler;
-    private MaterialesAdapter adapter;
+    private MaterialAdapterPresupuesto adapter;
     private RecyclerView.LayoutManager lManager;
-    private ArrayList<Material> listaItem;
+    private ArrayList<MaterialPresupuesto> listaItem;
     private FloatingActionButton btn_send,btn_email;
 
 
@@ -69,7 +69,7 @@ public class Material_presupuesto_listaConfirmar extends AppCompatActivity {
         });
     }
 
-    private void onClickGmail(View v, ArrayList<Material> array) {
+    private void onClickGmail(View v, ArrayList<MaterialPresupuesto> array) {
         Intent gmail = new Intent(Intent.ACTION_VIEW);
         gmail.setClassName("com.google.android.gm","com.google.android.gm.ComposeActivityGmail");
         gmail.putExtra(Intent.EXTRA_EMAIL, new String[] { "matiasfranceschi@gmail.com" });
@@ -79,6 +79,7 @@ public class Material_presupuesto_listaConfirmar extends AppCompatActivity {
         String mensaje="Presupuesto";
         mensaje+=agregarLinea();
         float total = 0;
+        float parcial = 0;
         int i;
         for(i = 0; i< array.size();i++) {
             mensaje+="Descripcion: ";
@@ -90,8 +91,12 @@ public class Material_presupuesto_listaConfirmar extends AppCompatActivity {
             mensaje+="Precio: ";
             mensaje+=String.valueOf(array.get(i).getPrecio());
             mensaje+=SaltoLinea();
+            mensaje+="Cantidad: ";
+            mensaje+=String.valueOf(array.get(i).getCantidad());
             mensaje+=SaltoLinea();
-            total += array.get(i).getPrecio();
+            mensaje+=SaltoLinea();
+            parcial = array.get(i).getPrecio()*array.get(i).getCantidad();
+            total += parcial;
         }
         if(i == array.size()){
             mensaje+=agregarLinea();
@@ -105,22 +110,21 @@ public class Material_presupuesto_listaConfirmar extends AppCompatActivity {
     }
 
 
-    private void inicializarRecicler(ArrayList<Material> items) {
+    private void inicializarRecicler(ArrayList<MaterialPresupuesto> items) {
         recycler = (RecyclerView) findViewById(R.id.reciclador);
         recycler.setHasFixedSize(true);
 
         lManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(lManager);
 
-        adapter = new MaterialesAdapter(items, this);
+        adapter = new MaterialAdapterPresupuesto(items, this);
         recycler.setAdapter(adapter);
         adapter.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
                 int oldPosition = recycler.getChildAdapterPosition(v);
-                Material prodEliminado = adapter.obtenerItem(oldPosition);
                 listaItem.remove(adapter.obtenerItem(oldPosition));
-                Toast.makeText(Material_presupuesto_listaConfirmar.this, prodEliminado.getDescripcion() + " fue eliminado.", Toast.LENGTH_LONG).show();
+                Toast.makeText(Material_presupuesto_listaConfirmar.this,"El producto fue removido del presupuesto", Toast.LENGTH_LONG).show();
                 adapter.notifyItemRemoved(oldPosition);
                 return true;
             }
@@ -129,7 +133,7 @@ public class Material_presupuesto_listaConfirmar extends AppCompatActivity {
     }
 
 
-    public void onClickWhatsApp(View view,ArrayList<Material> array) {
+    public void onClickWhatsApp(View view,ArrayList<MaterialPresupuesto> array) {
 
         PackageManager pm=getPackageManager();
         try {
@@ -139,6 +143,7 @@ public class Material_presupuesto_listaConfirmar extends AppCompatActivity {
             String mensaje="Presupuesto";
             mensaje+=agregarLinea();
             float total = 0;
+            float parcial = 0;
             int i;
             for(i = 0; i< array.size();i++) {
                 mensaje+="Descripcion: ";
@@ -150,8 +155,12 @@ public class Material_presupuesto_listaConfirmar extends AppCompatActivity {
                 mensaje+="Precio: ";
                 mensaje+=String.valueOf(array.get(i).getPrecio());
                 mensaje+=SaltoLinea();
+                mensaje+="Cantidad: ";
+                mensaje+=String.valueOf(array.get(i).getCantidad());
                 mensaje+=SaltoLinea();
-                total += array.get(i).getPrecio();
+                mensaje+=SaltoLinea();
+                parcial = array.get(i).getPrecio()*array.get(i).getCantidad();
+                total += parcial;
             }
             if(i == array.size()){
                 mensaje+=agregarLinea();

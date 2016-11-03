@@ -51,7 +51,7 @@ public class DB_MaterialOperaciones {
         progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
         progress.setMax(size);
         progress.show();
-        int mult = 10;
+        int mult = 100;
         for(progressStatus=0;progressStatus<size;progressStatus++){
 
             productoDatos.put("descripcion",prods.get(progressStatus).getDescripcion());
